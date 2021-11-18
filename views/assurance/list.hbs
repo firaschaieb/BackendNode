@@ -1,0 +1,28 @@
+<h3><a class="btn btn-secondary" href="/assurance"><i class="fa fa-plus"></i> Create New</a> assurance List</h3>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>NumContrat</th>
+            <th>Agence</th>
+            <th>dateDu</th>
+            <th>dateAu</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each list}}
+        <tr>
+            <td>{{this.Name}}</td>
+            <td>{{this.NumContrat}}</td>
+            <td>{{this.Agence}}</td>
+            <td>{{this.dateDu}}</td>            
+            <td>{{this.dateAu}}</td>
+            <td>
+                <a href="/assurance/{{this._id}}"><i class="fa fa-pencil fa-lg" aria-hidden="true"></i></a>
+                <a href="/assurance/delete/{{this._id}}" onclick="return confirm('Are you sure to delete this record ?');"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></a>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>

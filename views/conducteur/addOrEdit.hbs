@@ -1,0 +1,36 @@
+<h3>{{viewTitle}}</h3>
+
+<form action="/conducteur" method="POST" autocomplete="off">
+    <input type="hidden" name="_id" value="{{conducteur._id}}">
+    <div class="form-group">
+        <label>Nom</label>
+        <input type="text" class="form-control" name="name" placeholder="Nom" value="{{conducteur.name}}">
+        <div class="text-danger">
+            {{conducteur.nameError}}</div>
+    </div>
+    <div class="form-group">
+        <label>Prenom</label>
+        <input type="text" class="form-control" name="prenom" placeholder="Prenom" value="{{conducteur.prenom}}">
+        <div class="text-danger">
+            {{conducteur.prenomError}}</div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label>Permis</label>
+            <input type="text" class="form-control" name="permis" placeholder="Permis" value="{{conducteur.permis}}">
+        </div>
+        <div class="form-group col-md-6">
+            <label>deliv</label>
+            <input type="date" class="form-control" name="deliv" placeholder="deliv" value="{{conducteur.deliv}}">
+        </div>
+        <div class="form-group col-md-6">
+            <label>address</label>
+            <input type="text" class="form-control" name="address" placeholder="address" value="{{conducteur.address}}">
+        </div>
+    </div>
+    
+    <div class="form-group">
+        <button type="submit" class="btn btn-info"><i class="fa fa-database"></i> Submit</button>
+        <a class="btn btn-secondary" href="/conducteur/list"><i class="fa fa-list-alt"></i> View All</a>
+    </div>
+</form>

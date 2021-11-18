@@ -1,0 +1,28 @@
+<h3><a class="btn btn-secondary" href="/conducteur"><i class="fa fa-plus"></i> Create New</a> conducteur List</h3>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Prenom</th>
+            <th>Permis</th>
+            <th>Address</th>
+            <th>deliv</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each list}}
+        <tr>
+            <td>{{this.name}}</td>
+            <td>{{this.prenom}}</td>
+            <td>{{this.permis}}</td>
+            <td>{{this.address}}</td>
+            <td>{{this.deliv}}</td>
+            <td>
+                <a href="/conducteur/{{this._id}}"><i class="fa fa-pencil fa-lg" aria-hidden="true"></i></a>
+                <a href="/conducteur/delete/{{this._id}}" onclick="return confirm('Are you sure to delete this record ?');"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></a>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
