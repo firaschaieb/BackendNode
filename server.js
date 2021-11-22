@@ -8,6 +8,7 @@ const bodyparser = require('body-parser');
 const assureController = require('./controllers/assureController');
 const assuranceController = require('./controllers/assuranceController');
 const conducteurController = require('./controllers/conducteurController');
+const vehiculeController = require('./controllers/vehiculeController');
 
 var app = express();
 app.use(bodyparser.urlencoded({
@@ -24,3 +25,4 @@ app.listen(3000, () => {
 app.use('/assurance', assuranceController);
 app.use('/assure', assureController);
 app.use('/conducteur', conducteurController);
+app.use('/vehicule', vehiculeController);

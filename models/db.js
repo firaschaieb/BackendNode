@@ -8,3 +8,4 @@ mongoose.connect('mongodb+srv://firas123:azerty123@constat.cpine.mongodb.net/con
 require('./assure.model');
 require('./assurance.model')
 require('./conducteur.model')
+require('./vehicule.model')
