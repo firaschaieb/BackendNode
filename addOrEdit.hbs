@@ -1,0 +1,74 @@
+<h3>{{viewTitle}}</h3>
+
+<form action="/constat" method="POST" autocomplete="off">
+    <input type="hidden" name="_id" value="{{constat._id}}">
+
+    <div class="form-group">
+        <label>!!!!</label>
+    <input type="text" class="form-control" name="!!!!" placeholder="!!!!" value="{{constat.!!!!}}">
+        <div class="text-danger">
+            {{constat.!!!!_Error}}</div>
+    </div>
+    <div class="form-group">
+        <label>!!!!!</label>
+        <input type="text" class="form-control" name="!!!!!" placeholder="" value="{{constat.!!!!!}}">
+        <div class="text-danger">
+            {{constat.!!!!!Error}}</div>
+    </div>
+
+        <div class="form-group col-md-6">
+            <label>matricule</label>
+            <input type="text" class="form-control" name="matricule" placeholder="matricule" value="{{constat.matricule}}">
+        </div>
+            <div class="form-row">    
+        <div class="form-group col-md-6">
+            <label>type</label>
+            <input type="text" class="form-control" name="type" placeholder="type" value="{{constat.type}}">
+        </div>       
+     <div class="form-group col-md-6">
+            <label>marque</label>
+            <input type="text" class="form-control" name="marque" placeholder="marque" value="{{constat.marque}}">
+        </div>
+        <div class="form-group col-md-6">
+            <label>conducteur</label>
+            <input type="text" class="form-control" name="conducteur" placeholder="conducteur" value="{{constat.conducteur}}">
+        </div>  
+        <div class="form-group col-md-6">
+            <label>permis</label>
+            <input type="text" class="form-control" name="permis" placeholder="permis" value="{{constat.permis}}">
+        </div>  
+        <div class="form-group col-md-6">
+            <label>deliv</label>
+            <input type="date" class="form-control" name="deliv" placeholder="deliv" value="{{constat.deliv}}">
+        </div> 
+
+        <div class="form-group col-md-6">
+            <label>address</label>
+            <input type="text" class="form-control" name="address" placeholder="address" value="{{constat.address}}">
+        </div>  
+        <div class="form-group col-md-6">
+            <label>mobile</label>
+            <input type="text" class="form-control" name="mobile" placeholder="mobile" value="{{constat.mobile}}">
+        </div> 
+        <div class="form-group col-md-6">
+            <label>assure</label>
+            <input type="text" class="form-control" name="assure" placeholder="assure" value="{{constat.assure}}">
+        </div>  
+        <div class="form-group col-md-6">
+            <label>assurance</label>
+            <input type="text" class="form-control" name="assurance" placeholder="assurance" value="{{constat.assurance}}">
+        </div> 
+        <div class="form-group col-md-6">
+            <label>typeassurance</label>
+            <input type="text" class="form-control" name="typeassurance" placeholder="typeassurance" value="{{constat.typeassurance}}">
+        </div>  
+        <div class="form-group col-md-6">
+            <label>agence</label>
+            <input type="text" class="form-control" name="agence" placeholder="agence" value="{{constat.agence}}">
+        </div>    
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-info"><i class="fa fa-database"></i> Submit</button>
+        <a class="btn btn-secondary" href="/constat/list"><i class="fa fa-list-alt"></i> View All</a>
+    </div>
+</form>

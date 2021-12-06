@@ -1,0 +1,45 @@
+<h3><a class="btn btn-secondary" href="/constat"><i class="fa fa-plus"></i> Create New</a> constat List</h3>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>!!!!</th>
+            <th>matricule</th>
+            <th>type</th>
+            <th>marque</th>
+            <th>conducteur</th>
+            <th>permis</th>
+            <th>deliv</th>
+            <th>mobile</th>
+            <th>address</th>
+            <th>assure</th>
+            <th>assurance</th>
+            <th>typeassurance</th>
+            <th>agence</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each list}}
+        <tr>
+            
+            <td>{{this.!!!!}}</td>
+            <td>{{this.matricule}}</td>
+            <td>{{this.type}}</td>
+            <td>{{this.marque}}</td>
+            <td>{{this.conducteur}}</td>
+            <td>{{this.permis}}</td>
+            <td>{{this.deliv}}</td>
+            <td>{{this.mobile}}</td>
+            <td>{{this.address}}</td>
+            <td>{{this.assure}}</td>
+            <td>{{this.assurance}}</td>
+            <td>{{this.typeassurance}}</td>            
+            <td>{{this.agence}}</td>
+            <td>
+                <a href="/constat/{{this._id}}"><i class="fa fa-pencil fa-lg" aria-hidden="true"></i></a>
+                <a href="/constat/delete/{{this._id}}" onclick="return confirm('Are you sure to delete this record ?');"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></a>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
