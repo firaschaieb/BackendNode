@@ -1,88 +1,99 @@
-# Node.js MongoDB – User Authentication & Authorization example with JWT & Mongoose
+# Accident noting Application
 
-## User Registration, User Login and Authorization process.
-The diagram shows flow of how we implement User Registration, User Login and Authorization process.
 
-![jwt-token-authentication-node-js-example-flow](jwt-token-authentication-node-js-example-flow.png)
 
-For more detail, please visit:
-> [Node.js + MongoDB: User Authentication & Authorization with JWT](https://bezkoder.com/node-js-mongodb-auth-jwt/)
 
-You may need to implement Refresh Token:
 
-![jwt-refresh-token-node-js-example-flow](jwt-refresh-token-node-js-example-flow.png)
+# Constat
 
-> [Node.js JWT Refresh Token with MongoDB example](https://bezkoder.com/jwt-refresh-token-node-js-mongodb/)
+IOS Project Backend of a Mobile application designed for the motorcycle and car's owners wich facilates for them noting the accident and send the notes to insurance 100% digitaly without papers.
+This application gives the users the ability to call emergency in case of damaged car.
+Pay the fees for the SOS and insurance.
 
-Working with Front-end:
-> [Vue.js JWT Authentication with Vuex and Vue Router](https://bezkoder.com/jwt-vue-vuex-authentication/)
 
-> [Angular 8 JWT Authentication example](https://bezkoder.com/angular-jwt-authentication/)
+about
 
-> [Angular 10 JWT Authentication example](https://bezkoder.com/angular-10-jwt-auth/)
+Initially appeared on
+[gist](https://github.com/firaschaieb/FrontendIOS).
 
-> [Angular 11 JWT Authentication example](https://bezkoder.com/angular-11-jwt-auth/)
+## Getting Started
 
-> [React JWT Authentication & Authorization (without Redux) example](https://bezkoder.com/react-jwt-auth/)
+These instructions will give you a copy of the project up and running on
+your local machine for development and testing purposes. See deployment
+for notes on deploying the project on a live system.
 
-> [React Redux JWT Authentication & Authorization example](https://bezkoder.com/react-redux-jwt-auth/)
+### Prerequisites
 
-## More Practice:
-> [Node.js, Express & MongoDb: Build a CRUD Rest Api example](https://bezkoder.com/node-express-mongodb-crud-rest-api/)
+Requirements for the software and other tools to build, test and push 
+- [NodeJS](https://nodejs.org/en/)
+- [MangoDB](https://www.example.com)
+- [Docker](https://www.docker.com)
+### Installing
 
-> [Server side Pagination in Node.js with MongoDB and Mongoose](https://bezkoder.com/node-js-mongodb-pagination/)
+A step by step series of examples that tell you how to get a development
+environment running
 
-Associations:
-> [MongoDB One-to-One relationship tutorial with Mongoose examples](https://bezkoder.com/mongoose-one-to-one-relationship-example/)
+Say what the step will be
+1.
 
-> [MongoDB One-to-Many Relationship tutorial with Mongoose examples](https://bezkoder.com/mongoose-one-to-many-relationship/)
+    npm install
 
-> [MongoDB Many-to-Many Relationship with Mongoose examples](https://bezkoder.com/mongodb-many-to-many-mongoose/)
+2.
 
-Fullstack:
-> [Vue.js + Node.js + Express + MySQL example](https://bezkoder.com/vue-js-node-js-express-mysql-crud-example/)
+    npm install express
 
-> [Vue.js + Node.js + Express + PostgreSQL example](https://bezkoder.com/vue-node-express-postgresql/)
+3.
 
-> [Vue.js + Node.js + Express + MongoDB example](https://bezkoder.com/vue-node-express-mongodb-mevn-crud/)
+    npm dev start
 
-> [Angular 8 + Node.js + Express + MySQL example](https://bezkoder.com/angular-node-express-mysql/)
+### Docker
 
-> [Angular 8 + Node.js + Express + PostgreSQL example](https://bezkoder.com/angular-node-express-postgresql/)
+A step by step series of examples that tell you how to get a Docker environement working
+1.
 
-> [Angular 8 + Node.js + Express + MongoDB example](https://bezkoder.com/angular-mongodb-node-express/)
+    docker build . -t <your username>/node-web-app
+   
+2.
 
-> [Angular 10 + Node.js + Express + MySQL example](https://bezkoder.com/angular-10-node-js-express-mysql/)
+    docker run -p 49160:8080 -d <your username>/node-web-app  
 
-> [Angular 10 + Node.js + Express + PostgreSQL example](https://bezkoder.com/angular-10-node-express-postgresql/)
 
-> [Angular 10 + Node.js + Express + MongoDB example](https://bezkoder.com/angular-10-mongodb-node-express/)
+## Running the tests via http://localhost:3000/
 
-> [Angular 11 + Node.js Express + MySQL example](https://bezkoder.com/angular-11-node-js-express-mysql/)
+you either use postman via this url : http://localhost:8080/ 
+    
+    or
+    
+you go to the url via navigator : http://localhost:8080/
 
-> [Angular 11 + Node.js + Express + PostgreSQL example](https://bezkoder.com/angular-11-node-js-express-postgresql/)
+### Login Tests
 
-> [Angular 11 + Node.js + Express + MongoDB example](https://bezkoder.com/angular-11-mongodb-node-js-express/)
+to login you can test
 
-> [React + Node.js + Express + MySQL example](https://bezkoder.com/react-node-express-mysql/)
+    POST http://localhost:8080/users/login  
+ 
+send the username and password : 
+        
+        ContentType/applicationJson 
+        {
+            "username":"example",
+            "password": "examplePassword" 
+        }
 
-> [React + Node.js + Express + PostgreSQL example](https://bezkoder.com/react-node-express-postgresql/)
 
-> [React + Node.js + Express + MongoDB example](https://bezkoder.com/react-node-express-mongodb-mern-stack/)
+## Built With
 
-Integration on same Server/Port:
-> [Integrate Angular 8 with Node.js Express](https://bezkoder.com/integrate-angular-8-node-js/)
+  - [JavaScript](https://www.contributor-covenant.org/) -
+  - [NodeJS](https://nodejs.org/en/) - 
+  - [MangoDB](https://www.example.com) -
+  - [ExpressJS](https://expressjs.com/) -
 
-> [Integrate Angular 10 with Node.js Express](https://bezkoder.com/integrate-angular-10-node-js/)
+## Authors
 
-> [Integrate React with Node.js Express](https://bezkoder.com/integrate-react-express-same-server-port/)
+  - **Firas Chaieb** - *Provided README Template* -
+    [firaschaieb](https://github.com/firaschaieb)
+  - **Wissam Ben Njima** - ** -
 
-## Project setup
-```
-npm install
-```
+![command-line-pic](https://blog.lecacheur.com/wp-content/uploads/2014/10/docker.png)
+![command-line-pic](https://codemoto.io/wp-content/themes/cloudhost/library/images/node-express-mongo.png)
 
-### Run
-```
-node server.js
-```

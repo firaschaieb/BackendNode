@@ -82,7 +82,7 @@ router.get("/byuser/:username", async(req, res, next) => {
 router.get("/:id", getCar, (req, res) => {
     res.json(res.car);
 });
-router.post("/:id", getUser, multer, async(req, res, next) => {
+router.post("/", async(req, res, next) => {
     const user = await res.user
     const car = new Car({
         brand: req.body.brand,
@@ -90,8 +90,7 @@ router.post("/:id", getUser, multer, async(req, res, next) => {
         type: req.body.type,
         serialNumber: req.body.serialNumber,
         carsInSerial: req.body.carsInSerial,
-        author: user,
-        photos: `${req.protocol}://${req.get('host')}/upload/${req.file.filename}`,
+
     });
 
     try {
@@ -122,7 +121,22 @@ router.get("/:id", getCar, (req, res) => {
     }
 
 })
+/* DELETE car . */
 
+//delete car
+/**
+ * @swagger
+* tags:
+*  name: Car
+*  description: This is for the main Car
+* /car:
+*  delete:
+*    tags: [Car]
+*    description: Use to delete a car
+*    responses:
+*      '200':
+*        description: A successful response
+*/
  router.delete("/:id", getCar ,async(req, res) => {
      try {
          await res.Car.remove();
@@ -131,34 +145,62 @@ router.get("/:id", getCar, (req, res) => {
          res.status(500).json({ message: error.message });
      }
  });
+//Patch cars
+/**
+ * @swagger 
+ * tags:
+ *  name: Car
+ *  description: This is for the main Car
+ * /car:
+ *  patch:
+ *   tags: [Car]
+ *   summary: Updates a new car.
+ *   requestBody:
+ *      content:
+ *       application/json:
+ *         schema:
+ *           type: object
+ *           properties:
+ *             band:
+ *              type: string
+ *             name:
+ *              type: string
+ *             type:
+ *              type: string
+ *             serialNumber:
+ *              type: string
+ *             carsInSerial:
+ *              type: string
+ *  responses:
+ *      201:
+ *         description: Created
+ */
 
-// router.patch("/:id", getCar, (req, res) => {
-//     if (req.body.brand != null) {
-//         res.car.brand = req.body.brand;
-//     }
-//     if (req.body.name != null) {
-//         res.car.name = req.body.name;
-//     }
-//     if (req.body.type != null) {
-//         res.car.type = req.body.type;
-//     }
-//     if (req.body.serialNumber != null) {
-//         res.car.serialNumber = req.body.serialNumber;
-//     }
-//     if (req.body.place != null) {
-//         res.car.place = req.body.place;
-//     }
-//     if (req.body.image != null) {
-//         res.car.image = req.body.image;
-//     }
-//     try {
-//         res.car.save().then((updatedPost) => {
-//             res.json(updatedPost);
-//         });
-//     } catch (error) {
-//         res.status(400).json({ message: error.message });
-//     }
-// });
+ router.patch("/:id", getCar, (req, res) => {
+    if (req.body.brand != null) {
+       res.car.brand = req.body.brand;
+    }
+   if (req.body.name != null) {
+       res.car.name = req.body.name;
+   }
+   if (req.body.type != null) {
+        res.car.type = req.body.type;
+    }
+    if (req.body.serialNumber != null) {
+        res.car.serialNumber = req.body.serialNumber;
+   }
+   if (req.body.place != null) {
+        res.car.place = req.body.place;
+   }
+
+    try {
+       res.car.save().then((updatedPost) => {
+            res.json(updatedPost);
+        });
+    } catch (error) {
+        res.status(400).json({ message: error.message });
+    }
+});
 
  async function getCar(req, res, next) {
      try {

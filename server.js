@@ -8,6 +8,8 @@ const dbConfig = require("./app/config/db.config");
 const swaggerJsDocs = require("swagger-jsdoc");
 const swaggerUi = require("swagger-ui-express");
 var car = require("./app/routes/car.routes");
+var driver = require("./app/routes/driver.routes");
+var insurance = require("./app/routes/insurance.routes");
 const uploadRoute = require('./app/routes/upload.routes');
 router = express.Router();
 var corsOptions = {
@@ -61,6 +63,9 @@ app.use(logger('dev'));
 const db = require("./app/models");
 const Role = db.role;
 app.use("/car", car);
+app.use("/driver", driver);
+app.use("/insurance", insurance);
+
 db.mongoose
   .connect('mongodb+srv://firas123:azerty123@constat.cpine.mongodb.net/constat', {
     useNewUrlParser: true,
